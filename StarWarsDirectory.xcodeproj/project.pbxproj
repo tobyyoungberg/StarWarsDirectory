@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		F457A82C1E71140900227176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A82B1E71140900227176 /* AppDelegate.swift */; };
-		F457A82E1E71140900227176 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A82D1E71140900227176 /* MasterViewController.swift */; };
-		F457A8301E71140900227176 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A82F1E71140900227176 /* DetailViewController.swift */; };
+		F457A82E1E71140900227176 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A82D1E71140900227176 /* DirectoryViewController.swift */; };
+		F457A8301E71140900227176 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A82F1E71140900227176 /* PersonViewController.swift */; };
 		F457A8331E71140900227176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F457A8311E71140900227176 /* Main.storyboard */; };
 		F457A8351E71140900227176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F457A8341E71140900227176 /* Assets.xcassets */; };
 		F457A8381E71140900227176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F457A8361E71140900227176 /* LaunchScreen.storyboard */; };
 		F457A8431E71140900227176 /* StarWarsDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A8421E71140900227176 /* StarWarsDirectoryTests.swift */; };
+		F457A84E1E71149F00227176 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457A84D1E71149F00227176 /* Realm.framework */; };
+		F457A84F1E71149F00227176 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F457A84D1E71149F00227176 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F457A8521E7114A800227176 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457A8511E7114A800227176 /* RealmSwift.framework */; };
+		F457A8531E7114A800227176 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F457A8511E7114A800227176 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F465CE0C1E749CF700DDEFF3 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465CE0B1E749CF700DDEFF3 /* FontManager.swift */; };
+		F465CE0D1E74C59F00DDEFF3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457A84D1E71149F00227176 /* Realm.framework */; };
+		F465CE0E1E74C5A100DDEFF3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457A8511E7114A800227176 /* RealmSwift.framework */; };
+		F465CE121E74D62E00DDEFF3 /* directory.json in Resources */ = {isa = PBXBuildFile; fileRef = F465CE111E74D62E00DDEFF3 /* directory.json */; };
+		F4B1BD651E71216400F49CD8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1BD641E71216400F49CD8 /* Person.swift */; };
+		F4B1BD681E725FA400F49CD8 /* WebPersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1BD671E725FA400F49CD8 /* WebPersonManager.swift */; };
+		F4B1BD6A1E746E8700F49CD8 /* WebImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1BD691E746E8700F49CD8 /* WebImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,11 +37,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F457A8501E71149F00227176 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F457A8531E7114A800227176 /* RealmSwift.framework in Embed Frameworks */,
+				F457A84F1E71149F00227176 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F457A8281E71140900227176 /* StarWarsDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F457A82B1E71140900227176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F457A82D1E71140900227176 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		F457A82F1E71140900227176 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F457A82D1E71140900227176 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
+		F457A82F1E71140900227176 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		F457A8321E71140900227176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F457A8341E71140900227176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F457A8371E71140900227176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +64,13 @@
 		F457A83E1E71140900227176 /* StarWarsDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F457A8421E71140900227176 /* StarWarsDirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDirectoryTests.swift; sourceTree = "<group>"; };
 		F457A8441E71140900227176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F457A84D1E71149F00227176 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F457A8511E7114A800227176 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		F465CE0B1E749CF700DDEFF3 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		F465CE111E74D62E00DDEFF3 /* directory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = directory.json; sourceTree = "<group>"; };
+		F4B1BD641E71216400F49CD8 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../Model/Person.swift; sourceTree = "<group>"; };
+		F4B1BD671E725FA400F49CD8 /* WebPersonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPersonManager.swift; sourceTree = "<group>"; };
+		F4B1BD691E746E8700F49CD8 /* WebImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F457A8521E7114A800227176 /* RealmSwift.framework in Frameworks */,
+				F457A84E1E71149F00227176 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F465CE0D1E74C59F00DDEFF3 /* Realm.framework in Frameworks */,
+				F465CE0E1E74C5A100DDEFF3 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +98,8 @@
 		F457A81F1E71140900227176 = {
 			isa = PBXGroup;
 			children = (
+				F457A8511E7114A800227176 /* RealmSwift.framework */,
+				F457A84D1E71149F00227176 /* Realm.framework */,
 				F457A82A1E71140900227176 /* StarWarsDirectory */,
 				F457A8411E71140900227176 /* StarWarsDirectoryTests */,
 				F457A8291E71140900227176 /* Products */,
@@ -79,9 +118,11 @@
 		F457A82A1E71140900227176 /* StarWarsDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				F465CE0A1E749CE200DDEFF3 /* Style */,
+				F4B1BD661E7235F500F49CD8 /* Model */,
 				F457A82B1E71140900227176 /* AppDelegate.swift */,
-				F457A82D1E71140900227176 /* MasterViewController.swift */,
-				F457A82F1E71140900227176 /* DetailViewController.swift */,
+				F457A82D1E71140900227176 /* DirectoryViewController.swift */,
+				F457A82F1E71140900227176 /* PersonViewController.swift */,
 				F457A8311E71140900227176 /* Main.storyboard */,
 				F457A8341E71140900227176 /* Assets.xcassets */,
 				F457A8361E71140900227176 /* LaunchScreen.storyboard */,
@@ -95,8 +136,27 @@
 			children = (
 				F457A8421E71140900227176 /* StarWarsDirectoryTests.swift */,
 				F457A8441E71140900227176 /* Info.plist */,
+				F465CE111E74D62E00DDEFF3 /* directory.json */,
 			);
 			path = StarWarsDirectoryTests;
+			sourceTree = "<group>";
+		};
+		F465CE0A1E749CE200DDEFF3 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				F465CE0B1E749CF700DDEFF3 /* FontManager.swift */,
+			);
+			name = Style;
+			sourceTree = "<group>";
+		};
+		F4B1BD661E7235F500F49CD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4B1BD641E71216400F49CD8 /* Person.swift */,
+				F4B1BD671E725FA400F49CD8 /* WebPersonManager.swift */,
+				F4B1BD691E746E8700F49CD8 /* WebImageManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +169,8 @@
 				F457A8241E71140900227176 /* Sources */,
 				F457A8251E71140900227176 /* Frameworks */,
 				F457A8261E71140900227176 /* Resources */,
+				F457A8501E71149F00227176 /* Embed Frameworks */,
+				F457A8541E71152900227176 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,10 +211,12 @@
 				TargetAttributes = {
 					F457A8271E71140900227176 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63AT93P487;
 						ProvisioningStyle = Automatic;
 					};
 					F457A83D1E71140900227176 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63AT93P487;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F457A8271E71140900227176;
 					};
@@ -192,18 +256,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F465CE121E74D62E00DDEFF3 /* directory.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F457A8541E71152900227176 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F457A8241E71140900227176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F457A8301E71140900227176 /* DetailViewController.swift in Sources */,
-				F457A82E1E71140900227176 /* MasterViewController.swift in Sources */,
+				F4B1BD6A1E746E8700F49CD8 /* WebImageManager.swift in Sources */,
+				F4B1BD681E725FA400F49CD8 /* WebPersonManager.swift in Sources */,
+				F465CE0C1E749CF700DDEFF3 /* FontManager.swift in Sources */,
+				F457A8301E71140900227176 /* PersonViewController.swift in Sources */,
+				F457A82E1E71140900227176 /* DirectoryViewController.swift in Sources */,
+				F4B1BD651E71216400F49CD8 /* Person.swift in Sources */,
 				F457A82C1E71140900227176 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +428,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 63AT93P487;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StarWarsDirectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tjamstudios.StarWarsDirectory;
@@ -355,6 +445,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 63AT93P487;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StarWarsDirectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tjamstudios.StarWarsDirectory;
@@ -368,6 +463,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 63AT93P487;
+				FRAMEWORK_SEARCH_PATHS = (
+					RealmSwift.framework,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StarWarsDirectoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tjamstudios.StarWarsDirectoryTests;
@@ -382,6 +482,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 63AT93P487;
+				FRAMEWORK_SEARCH_PATHS = (
+					RealmSwift.framework,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StarWarsDirectoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tjamstudios.StarWarsDirectoryTests;
@@ -410,6 +515,7 @@
 				F457A8491E71140900227176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F457A84A1E71140900227176 /* Build configuration list for PBXNativeTarget "StarWarsDirectoryTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +524,7 @@
 				F457A84C1E71140900227176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
