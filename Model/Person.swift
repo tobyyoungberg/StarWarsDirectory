@@ -18,6 +18,18 @@ enum PersonAffiliation : String {
 }
 
 class Person: Object {
+    static let birthdayDisplayFormatter : DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.locale = Locale.current
+        return dateFormatter
+    }()
+    
+    static let birthdayParseFormatter : DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "y-MM-dd"
+        return dateFormatter
+    }()
     
     dynamic var firstName = ""
     dynamic var lastName = ""
@@ -67,11 +79,9 @@ class Person: Object {
     
     var birthdayString : String {
         get {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            dateFormatter.locale = Locale.current
+
             if let date = self.birthdate {
-                return dateFormatter.string(from: date)
+                return Person.birthdayDisplayFormatter.string(from: date)
             } else {
                 return NSLocalizedString("Unknown", comment: "Information unknown.")
             }
@@ -93,8 +103,8 @@ class Person: Object {
         for person in personArray {
             var personCopy = person as? [String : Any]
             
-            let dateString = personCopy?[personBirthDateKey] as? String
-            personCopy?[personBirthDateKey] = self.convertDate(dateString)
+            let dateString = personCopy?[WebPersonManager.personBirthDateKey] as? String
+            personCopy?[WebPersonManager.personBirthDateKey] = self.convertDate(dateString)
             if let personCopy = personCopy {
                 realm.create(Person.self, value: personCopy)
             }
@@ -104,8 +114,6 @@ class Person: Object {
     class func convertDate(_ string: String?) -> Date {
         guard let dateString = string else { return Date() }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "y-MM-dd"
-        return dateFormatter.date(from: dateString) ?? Date()
+        return Person.birthdayParseFormatter.date(from: dateString) ?? Date()
     }
 }

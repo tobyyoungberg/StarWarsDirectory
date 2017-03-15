@@ -14,10 +14,9 @@ enum WebPersonManagerError : Error {
     case httpError
 }
 
-let personBirthDateKey = "birthdate"
-let personIndividuals = "individuals"
-
 class WebPersonManager {
+    static let personBirthDateKey = "birthdate"
+    static let personIndividuals = "individuals"
     static let shared = WebPersonManager()
     
     let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -34,7 +33,7 @@ class WebPersonManager {
                 guard let personData = try? JSONSerialization.jsonObject(with: data, options: []),
                     JSONSerialization.isValidJSONObject(personData),
                     let personDict = personData as? [String : Any],
-                    let personArray = personDict[personIndividuals] as? [Any] else {
+                    let personArray = personDict[WebPersonManager.personIndividuals] as? [Any] else {
                         
                         completion?(WebPersonManagerError.invalidJSON)
                         return
