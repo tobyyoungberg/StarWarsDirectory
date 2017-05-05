@@ -34,30 +34,3 @@ class WebImageManager {
         task.resume()
     }
 }
-
-// MARK: - UIImageView extension
-
-extension UIImageView {
-    func setProfileImage(person: Person?) {
-        self.alpha = 0.0
-        if let url = URL(string: person?.profilePicture ?? "") {
-            WebImageManager.shared.getImage(url: url) { image, url, wasCached in
-                DispatchQueue.main.async {
-                    if url.absoluteString == person?.profilePicture {
-                        
-                        self.image = image
-                        if !wasCached {
-                            UIView.animate(withDuration: 0.25, animations: {
-                                self.alpha = 1.0
-                            })
-                        } else {
-                            self.alpha = 1.0
-                        }
-                    }
-                }
-            }
-        } else {
-            self.image = nil
-        }
-    }
-}

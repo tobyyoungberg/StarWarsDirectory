@@ -41,7 +41,26 @@ class PersonViewController: UIViewController {
         
         self.affiliationImage?.image = self.person?.affiliationImage
         
-        self.profileImage?.setProfileImage(person: person)
+        self.profileImage?.alpha = 0.0
+        if let url = URL(string: person?.profilePicture ?? "") {
+            WebImageManager.shared.getImage(url: url) { image, url, wasCached in
+                DispatchQueue.main.async {
+                    if url.absoluteString == self.person?.profilePicture {
+                        
+                        self.profileImage?.image = image
+                        if !wasCached {
+                            UIView.animate(withDuration: 0.25, animations: {
+                                self.profileImage?.alpha = 1.0
+                            })
+                        } else {
+                            self.profileImage?.alpha = 1.0
+                        }
+                    }
+                }
+            }
+        } else {
+            self.profileImage?.image = nil
+        }
     }
 
 
